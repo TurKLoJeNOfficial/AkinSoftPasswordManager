@@ -1,0 +1,73 @@
+﻿@model AkınSoft_Password_Manager.Models.Class.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/TestLayout.cshtml";
+    int count = 0;
+}
+<br />
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Categories List </h6><a href="/Categories/AddCategories/" class="btn btn-info">Ekle</a>
+            </div>
+            @if (TempData["DeleteCategories"] != null)
+            {
+                <div class="alert alert-success">@TempData["DeleteCategories"]</div>
+            }
+            else if ((TempData["DeleteError"] != null))
+            {
+                <div class="alert alert-danger">@TempData["DeleteError"]</div>
+            }
+            else if ((TempData["NotFoundCategory"] != null))
+            {
+                <div class="alert alert-warning">@TempData["NotFoundCategory"]</div>
+            }
+            else if ((TempData["AddPasswords"] != null))
+            {
+                <div class="alert alert-success">@TempData["AddPasswords"]</div>
+            }
+            else if ((TempData["UpdateCategories"] != null))
+            {
+                <div class="alert alert-success">@TempData["UpdateCategories"]</div>
+            }
+            else if ((TempData["NotAccess"] != null))
+            {
+                <div class="alert alert-danger">@TempData["NotAccess"]</div>
+            }
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center justify-content-center mb-0">
+                        <thead>
+                            <tr>
+
+                                <th>#</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Başlık</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var x in Model.Categories)
+                            {
+                                count++;
+                                <tr>
+
+                                    <td>@count</td>
+                                    <td style="margin:20px;">
+                                        <p class="text-sm font-weight-bold mb-0">@x.Title</p>
+                                    </td>
+
+                                    <td class="align-middle">
+
+                                        @*<a href="/Categories/DeleteCategories/@x.CategoryID" class="btn btn-danger">Sil</a>*@
+                                        <a href="/Categories/GetCategories/@x.CategoryID" class="btn btn-warning">Güncelle</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
