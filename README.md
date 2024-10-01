@@ -1,5 +1,8 @@
-# PasswordManager
- Akınsoft firması için geliştirdiğim Password Manager
+# AkınSoft PasswordManager
+
+I developed this Password Manager for Akınsoft to securely store and manage passwords. It allows users to safely save their passwords, retrieve them when needed, and ensures high-level encryption for data protection. This project was designed to meet the security needs of the company, ensuring both user-friendly functionality and strong security practices.
+
+Bu Parola Yöneticisini Akınsoft için parolaları güvenli bir şekilde saklamak ve yönetmek için geliştirdim. Kullanıcıların şifrelerini güvenli bir şekilde kaydetmelerine, gerektiğinde geri almalarına ve veri koruması için üst düzey şifreleme sağlamalarına olanak tanır. Bu proje, hem kullanıcı dostu işlevsellik hem de güçlü güvenlik uygulamaları sağlayarak şirketin güvenlik ihtiyaçlarını karşılamak üzere tasarlandı.
 
 ![Screenshot_1](https://github.com/TurKLoJeN/PasswordManager/assets/32311900/d53a66b6-e9ee-4210-ad3b-5907ab8970b5)
 ![Screenshot_2](https://github.com/TurKLoJeN/PasswordManager/assets/32311900/f7bcb56b-df32-4e56-9c0e-0d74d38c7ffc)
